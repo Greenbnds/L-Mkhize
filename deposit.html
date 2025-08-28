@@ -15,19 +15,44 @@
 
   <main class="max-w-3xl mx-auto px-4">
     <section class="rounded-3xl border border-red-900/30 bg-zinc-900/60 p-6">
-      <h2 class="font-semibold">Make a Deposit</h2>
-      <form class="mt-4 grid gap-4">
+      <h2 class="font-semibold text-lg">Deposit Instructions</h2>
+      <p class="mt-2 text-sm text-zinc-300">
+        Please make your deposit using the following bank details. Ensure you use your <strong>Wallet ID</strong> as a reference for faster allocation.
+      </p>
+
+      <!-- Bank Details -->
+      <div class="mt-6 grid gap-4 text-sm">
+        <div class="rounded-2xl border border-zinc-800 bg-zinc-950 p-4">
+          <p class="text-zinc-400">Bank Name</p>
+          <p class="font-semibold text-white">Nedbank</p>
+        </div>
+        <div class="rounded-2xl border border-zinc-800 bg-zinc-950 p-4">
+          <p class="text-zinc-400">Account Number</p>
+          <p class="font-semibold text-white">1322652759</p>
+        </div>
+        <div class="rounded-2xl border border-zinc-800 bg-zinc-950 p-4">
+          <p class="text-zinc-400">Branch Code</p>
+          <p class="font-semibold text-white">198765</p>
+        </div>
+      </div>
+
+      <!-- Notice -->
+      <div class="mt-6 p-4 rounded-2xl border border-yellow-600/40 bg-yellow-900/30">
+        <p class="text-yellow-300 text-sm">
+          ⚠️ Please complete payment immediately and send proof of payment to <a href="mailto:support@satrix.app" class="underline">support@satrix.app</a> for immediate attention.
+        </p>
+      </div>
+
+      <!-- Deposit Form -->
+      <form class="mt-6 grid gap-4">
         <label class="grid gap-2">
           <span class="text-sm text-zinc-300">Amount (ZAR)</span>
           <input type="number" min="1" step="0.01" class="px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 outline-none" placeholder="e.g. 2500.00" required />
         </label>
-        <label class="grid gap-2">
-          <span class="text-sm text-zinc-300">Reference</span>
-          <input type="text" class="px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 outline-none" placeholder="Deposit reference" />
-        </label>
-        <button type="submit" class="rounded-2xl px-5 py-3 font-semibold border border-red-600/40 bg-red-600/20 hover:bg-red-600/30">Confirm Deposit</button>
+        <button type="submit" class="rounded-2xl px-5 py-3 font-semibold border border-red-600/40 bg-red-600/20 hover:bg-red-600/30">
+          Confirm Deposit
+        </button>
       </form>
-      <p class="text-xs text-zinc-400 mt-4">Note: This is a static demo page; connect to your backend or payment rails to process deposits.</p>
     </section>
   </main>
 </body>
