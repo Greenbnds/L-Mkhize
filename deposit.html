@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SATRIX • Deposit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-zinc-950 text-zinc-100">
+  <header class="max-w-3xl mx-auto px-4 py-6 flex items-center justify-between">
+    <a href="wallet.html" class="text-sm text-zinc-300 hover:text-white">← Back to Wallet</a>
+    <h1 class="text-xl font-bold">Deposit – Mrs L Mkhize</h1>
+    <div></div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4">
+    <section class="rounded-3xl border border-red-900/30 bg-zinc-900/60 p-6">
+      <h2 class="font-semibold">Make a Deposit</h2>
+      <form class="mt-4 grid gap-4">
+        <label class="grid gap-2">
+          <span class="text-sm text-zinc-300">Amount (ZAR)</span>
+          <input type="number" min="1" step="0.01" class="px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 outline-none" placeholder="e.g. 2500.00" required />
+        </label>
+        <label class="grid gap-2">
+          <span class="text-sm text-zinc-300">Reference</span>
+          <input type="text" class="px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 outline-none" placeholder="Deposit reference" />
+        </label>
+        <button type="submit" class="rounded-2xl px-5 py-3 font-semibold border border-red-600/40 bg-red-600/20 hover:bg-red-600/30">Confirm Deposit</button>
+      </form>
+      <p class="text-xs text-zinc-400 mt-4">Note: This is a static demo page; connect to your backend or payment rails to process deposits.</p>
+    </section>
+  </main>
+</body>
+</html>

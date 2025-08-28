@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SATRIX • Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+  </style>
+</head>
+<body class="min-h-screen bg-zinc-950 text-zinc-100 flex items-center justify-center px-4">
+  <div class="w-full max-w-sm bg-zinc-900/70 border border-zinc-800 rounded-3xl shadow-xl p-8">
+    <!-- Logo -->
+    <div class="flex justify-center mb-6">
+      <img src="images/logo.webp" alt="SATRIX Logo" class="h-16 w-auto">
+    </div>
+
+    <h1 class="text-2xl font-bold text-center mb-6">Welcome to SATRIX</h1>
+
+    <!-- Login Form -->
+    <form id="loginForm" class="space-y-5">
+      <div>
+        <label class="block text-sm mb-2">Username</label>
+        <input id="username" type="text" class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 outline-none" placeholder="Enter Username" required>
+      </div>
+      <div>
+        <label class="block text-sm mb-2">Password</label>
+        <input id="password" type="password" class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 outline-none" placeholder="Enter Password" required>
+      </div>
+      <button type="submit" class="w-full rounded-2xl px-5 py-3 font-semibold border border-red-600/40 bg-red-600/20 hover:bg-red-600/30 transition">
+        Login
+      </button>
+    </form>
+
+    <!-- Welcome Message -->
+    <div id="welcome" class="hidden mt-6 text-center">
+      <h2 class="text-xl font-bold">Welcome Mrs Mkhize 🎉</h2>
+      <p class="text-sm text-zinc-400 mt-2">You are successfully logged in to your SATRIX account.</p>
+      <a href="wallet.html" class="inline-block mt-4 px-6 py-3 rounded-2xl font-semibold border border-zinc-700 bg-zinc-900 hover:bg-zinc-800">Go to Wallet</a>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    const welcomeBox = document.getElementById('welcome');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      if (username === 'Lindiwe123' && password === 'Mkhize100') {
+        form.classList.add('hidden');
+        welcomeBox.classList.remove('hidden');
+      } else {
+        alert('Invalid username or password. Please try again.');
+      }
+    });
+  </script>
+</body>
+</html>
